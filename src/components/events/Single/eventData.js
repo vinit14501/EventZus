@@ -26,13 +26,13 @@ export const eventData = [
     availableSeats: 768,
     registrationEndDate: "April 10, 2025",
     organiserName: "Tech Innovations Inc.",
-    organiserEmail: "events@techinnovations.com",
+    organiserEmail: "events@example.com",
     organiserPhone: "+1 (415) 555-7890",
-    organiserWebsite: "https://techinnovations.com",
+    organiserWebsite: "https://example.com",
     socialMedia: {
-      twitter: "https://twitter.com/techinnovations",
-      facebook: "https://facebook.com/techinnovations",
-      linkedin: "https://linkedin.com/company/techinnovations",
+      twitter: "https://twitter.com",
+      facebook: "https://facebook.com",
+      linkedin: "https://linkedin.com",
     },
     speakers: [
       {
