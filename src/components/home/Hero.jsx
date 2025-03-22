@@ -35,7 +35,7 @@ export default function Hero() {
                 transition={{ duration: 0.5, delay: 0.4 }}
               >
                 <motion.button
-                  className="px-8 py-4 bg-white text-blue-900 font-semibold rounded-lg flex items-center gap-2 hover:bg-blue-50 transition-colors shadow-lg capitalize"
+                  className="px-8 py-4 bg-white text-blue-900 text-lg font-bold rounded-4xl flex items-center gap-2 hover:bg-blue-50 transition-colors shadow-lg capitalize"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -46,13 +46,13 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Right Image Section - Same as original with improved container styling */}
-        <div className="w-full md:w-1/2 flex items-center justify-center p-6 relative z-10">
+        {/* Right Image Section - Modified to touch top and bottom */}
+        <div className="w-full md:w-1/2 relative z-10 h-full">
           <motion.div
             initial={{ scale: 1.1, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 1 }}
-            className="w-full h-5/6 rounded-2xl overflow-hidden shadow-2xl relative"
+            className="absolute inset-0 overflow-hidden shadow-2xl"
           >
             {/* Fallback color in case image fails to load */}
             <div className="absolute inset-0 bg-blue-800"></div>

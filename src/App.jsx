@@ -12,8 +12,10 @@ import ForgotPassword from "./components/forgot-password/ForgotPassword"
 import HomePage from "./pages/HomePage"
 import ContactPage from "./pages/ContactPage"
 import AllEventsPage from "./pages/AllEventsPage"
+import EventDetailsPage from "./pages/EventDetailsPage"
 import Footer from "./components/layout/Footer"
 import CreateEventPage from "./pages/CreateEventPage"
+import FaqPage from "./pages/FaqPage"
 
 // Wrapper component to conditionally render Navbar and Footer
 const AppLayout = () => {
@@ -55,6 +57,16 @@ const AppLayout = () => {
         <Route
           path="/events/create"
           element={<CreateEventPage />}
+        />
+        {/* Add the dynamic route for event details */}
+        <Route
+          path="/event/:id"
+          element={<EventDetailsPage />}
+        />
+        {/* Add route for FAQ page */}
+        <Route
+          path="/faq"
+          element={<FaqPage />}
         />
       </Routes>
       {!isAuthPage && <Footer />}

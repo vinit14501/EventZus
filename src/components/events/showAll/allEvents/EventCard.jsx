@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
 import { MapPin, Calendar, Clock } from "lucide-react"
 
@@ -90,16 +91,20 @@ const EventCard = ({ event, cardSize }) => {
 
         <p className="text-gray-700 mb-4 flex-grow">{truncatedDescription}</p>
 
-        <motion.button
-          whileHover={{
-            scale: 1.05,
-            boxShadow: "0 0 15px rgba(59, 130, 246, 0.5)",
-          }}
-          className="w-full py-2 px-4 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 transition-colors duration-300 mt-auto"
-          onClick={() => (window.location.href = `/event/${id}`)}
+        <Link
+          to={`/event/${id}`}
+          className="block w-full"
         >
-          View Details
-        </motion.button>
+          <motion.button
+            whileHover={{
+              scale: 1.05,
+              boxShadow: "0 0 15px rgba(59, 130, 246, 0.5)",
+            }}
+            className="w-full py-2 px-4 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 transition-colors duration-300 mt-auto"
+          >
+            View Details
+          </motion.button>
+        </Link>
       </div>
     </motion.div>
   )

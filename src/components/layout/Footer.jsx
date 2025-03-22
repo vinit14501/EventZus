@@ -31,6 +31,7 @@ const Footer = () => {
       id: "resources",
       title: "Resources",
       links: [
+        { name: "FAQ", path: "/faq" },
         { name: "Help Center", path: "/help" },
         { name: "Privacy Policy", path: "/privacy" },
         { name: "Terms of Service", path: "/terms" },

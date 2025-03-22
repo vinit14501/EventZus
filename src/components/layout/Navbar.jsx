@@ -1,7 +1,15 @@
 import React, { useState, useEffect } from "react"
 import { Link, useLocation } from "react-router-dom"
 import { motion, AnimatePresence } from "framer-motion"
-import { Phone, Menu, X, Calendar, Users, LogIn } from "lucide-react"
+import {
+  Phone,
+  Menu,
+  X,
+  Calendar,
+  Users,
+  LogIn,
+  HelpCircle,
+} from "lucide-react"
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -34,6 +42,17 @@ const Navbar = () => {
     },
     {
       id: 3,
+      title: "FAQ",
+      path: "/faq",
+      icon: (
+        <HelpCircle
+          size={18}
+          className="hidden sm:block"
+        />
+      ),
+    },
+    {
+      id: 4,
       title: "Sign In",
       path: "/signin",
       icon: (
